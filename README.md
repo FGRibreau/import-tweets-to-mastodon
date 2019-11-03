@@ -1,4 +1,4 @@
-# How to export Tweets into Mastodon (e.g. https://framapiaf.org )
+# How to imports Tweets into Mastodon (e.g. https://framapiaf.org )
 
 #### Ask twitter for a data export
 
