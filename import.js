@@ -48,7 +48,6 @@ function getTweets() {
   debug('Loading %s tweets...', tweets.length);
 
   function _keepTweet(tweet) {
-    // only keep tweets that ends with specified year
     if (!tweet.created_at.endsWith(config.twitter.year)) {
       return false;
     }
