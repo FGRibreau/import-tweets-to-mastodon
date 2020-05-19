@@ -21,6 +21,6 @@ Tips: add the `DEBUG=*` environment variable for verbose output.
 
 #### Need help?
 
-This project is open-sourced as is. 
-I won't do free support.
-If you really want support please consider [sponsoring me](https://github.com/sponsors/FGRibreau)
+- This project is open-sourced as is. 
+- I won't do support for free.
+- If you really want support please consider [sponsoring me](https://github.com/sponsors/FGRibreau) :+1:
