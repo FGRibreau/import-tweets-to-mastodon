@@ -18,3 +18,9 @@ MASTODON_API_BASEPATH=https://mastodon-instance.com MASTODON_API_KEY=YOUR_TOKEN 
 Tips: add the `DEBUG=*` environment variable for verbose output.
 
 :tada:
+
+#### Need help?
+
+This project is open-sourced as is. 
+I won't do free support.
+If you really want support please consider [sponsoring me](https://github.com/sponsors/FGRibreau)
