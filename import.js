@@ -32,7 +32,9 @@ function getTweets() {
   const _global = {
     window: {
       YTD: {
-        tweet: {}
+        tweet: {
+          part0: {}
+        }
       }
     }
   };
@@ -41,8 +43,8 @@ function getTweets() {
   const context = vm.createContext(_global);
   script.runInContext(context);
 
-  const tweets = Object.keys(_global.window.YTD.tweet).reduce((m, key, i, obj) => {
-    return m.concat(_global.window.YTD.tweet[key]);
+  const tweets = Object.keys(_global.window.YTD.tweet.part0).reduce((m, key, i, obj) => {
+    return m.concat(_global.window.YTD.tweet.part0[key].tweet);
   }, []).filter(_keepTweet)
 
   debug('Loading %s tweets...', tweets.length);
