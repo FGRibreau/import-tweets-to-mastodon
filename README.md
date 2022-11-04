@@ -12,7 +12,7 @@ Go [here](https://twitter.com/settings/your_twitter_data).
 git clone git@github.com:FGRibreau/import-tweets-to-mastodon.git
 cd import-tweets-to-mastodon
 npm install
-MASTODON_API_BASEPATH=https://mastodon-instance.com MASTODON_API_KEY=YOUR_TOKEN TWITTER_TWEETJS_FILEPATH=/path/to/tweet.js node import.js
+MASTODON_API_BASEPATH=https://mastodon-instance.com MASTODON_API_KEY=YOUR_TOKEN TWITTER_TWEETJS_FILEPATH=/path/to/tweets.js node import.js
 ```
 
 Tips: add the `DEBUG=*` environment variable for verbose output.
