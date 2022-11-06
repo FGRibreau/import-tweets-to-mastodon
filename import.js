@@ -32,7 +32,7 @@ function getTweets() {
   const _global = {
     window: {
       YTD: {
-        tweet: {
+        tweets: {
           part0: {}
         }
       }
@@ -43,8 +43,8 @@ function getTweets() {
   const context = vm.createContext(_global);
   script.runInContext(context);
 
-  const tweets = Object.keys(_global.window.YTD.tweet.part0).reduce((m, key, i, obj) => {
-    return m.concat(_global.window.YTD.tweet.part0[key].tweet);
+  const tweets = Object.keys(_global.window.YTD.tweets.part0).reduce((m, key, i, obj) => {
+    return m.concat(_global.window.YTD.tweets.part0[key].tweet);
   }, []).filter(_keepTweet)
 
   debug('Loading %s tweets...', tweets.length);
@@ -97,20 +97,12 @@ function importTweets(tweets) {
   next();
 }
 
-function createMastodonPost({
-  apiToken,
-  baseURL
-}, {
-  status,
-  language
-}) {
-  return axios({
-    url: '/api/v1/statuses',
+async function createMastodonPost({ apiToken, baseURL }, { status, language}) {
+  return await axios({
+	url: '/api/v1/statuses',
     baseURL: baseURL,
     method: 'POST',
-    headers: {
-      'Authorization': 'Bearer ' + apiToken
-    },
+    headers: { 'Authorization': 'Bearer ' + apiToken },
     data: {
       status,
       language,
