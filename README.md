@@ -23,3 +23,10 @@ Tips: add the `DEBUG=*` environment variable for verbose output.
 - This project is open-sourced as is. 
 - I will do support for free.
 - [sponsoring the original creator](https://github.com/sponsors/FGRibreau) :+1:
+
+#### My Todolist
+- Replace t.co links with original links
+- Replace twitter Image links with image
+- Improve Error Handling/Easier UI?
+
+Hey i'm pretty new to nodejs and GitHub management, so please tell me if i'm doing something wrong etc...
