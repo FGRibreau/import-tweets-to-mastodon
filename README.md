@@ -20,7 +20,6 @@ Tips: add the `DEBUG=*` environment variable for verbose output.
 :tada:
 
 #### Need help?
-
 - This project is open-sourced as is. 
-- I won't do support for free.
-- If you really want support please consider [sponsoring me](https://github.com/sponsors/FGRibreau) :+1:
+- I will do support for free.
+- [sponsoring the original creator](https://github.com/sponsors/FGRibreau) :+1:
