@@ -72,15 +72,13 @@ function importTweets(tweets) {
       debug('Tweets import completed');
       return;
     }
-    const target = {
+    createMastodonPost({
       apiToken: config.mastodon.api.key,
       baseURL: config.mastodon.api.basePath
-    }
-    const content = {
+    },{
       status: replaceTwitterUrls(tweet.full_text,tweet.entities.urls),
       language: tweet.lang
-    }
-    createMastodonPost(target,content).then((mastodonPost) => {
+    }).then((mastodonPost) => {
       debug('%s/%i Created post %s', current, max, mastodonPost.url);
       progress.addTick();
       next();

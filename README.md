@@ -4,7 +4,7 @@
 
 Go [here](https://twitter.com/settings/your_twitter_data).
 
-#### Extract archive and look for `tweet.js`
+#### Extract archive and look for `tweets.js`
 
 #### Clone this repo and run
 
@@ -20,13 +20,6 @@ Tips: add the `DEBUG=*` environment variable for verbose output.
 :tada:
 
 #### Need help?
-- This project is open-sourced as is. 
-- I will do support for free.
-- [sponsoring the original creator](https://github.com/sponsors/FGRibreau) :+1:
-
-#### My Todolist
-- Replace t.co links with original links :white_check_mark:
-- Replace twitter Image links with image
-- Improve Error Handling/Easier UI?
-
-Hey i'm pretty new to nodejs and GitHub management, so please tell me if i'm doing something wrong etc...
+- This project is open-sourced as is.
+- I won't do support for free.
+- If you really want support please consider [sponsoring me](https://github.com/sponsors/FGRibreau) :+1:
