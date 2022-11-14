@@ -25,7 +25,7 @@ Tips: add the `DEBUG=*` environment variable for verbose output.
 - [sponsoring the original creator](https://github.com/sponsors/FGRibreau) :+1:
 
 #### My Todolist
-- Replace t.co links with original links
+- Replace t.co links with original links :white_check_mark:
 - Replace twitter Image links with image
 - Improve Error Handling/Easier UI?
 

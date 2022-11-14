@@ -23,9 +23,6 @@ const config = env.getOrElseAll({
     }
   }
 });
-
-
-
 function getTweets() {
   const vm = require('vm');
   const fs = require('fs');
@@ -63,8 +60,6 @@ function getTweets() {
 
   return tweets;
 }
-
-
 function importTweets(tweets) {
   const progress = require('progressbar').create().step('Importing tweets');
   const max = tweets.length;
@@ -78,25 +73,29 @@ function importTweets(tweets) {
       debug('Tweets import completed');
       return;
     }
-
-    createMastodonPost({
+    const target = {
       apiToken: config.mastodon.api.key,
       baseURL: config.mastodon.api.basePath
-    }, {
-      status: tweet.full_text,
+    }
+    const content = {
+      status: replaceTwitterUrls(tweet.full_text,tweet.entities.urls),
       language: tweet.lang
-    }).then((mastodonPost) => {
+    }
+    createMastodonPost(target,content).then((mastodonPost) => {
       debug('%s/%i Created post %s', current, max, mastodonPost.url);
       progress.addTick();
       next();
     }).catch(err => {
       console.log(err);
-    })
+    });
   }
-
-  next();
 }
-
+function replaceTwitterUrls(full_text, urls) {
+  urls.forEach(url => {
+    full_text=full_text.replace(url.url,url.expanded_url);
+  });
+  return full_text;
+}
 function createMastodonPost({
   apiToken,
   baseURL
@@ -120,5 +119,4 @@ function createMastodonPost({
     return response.data
   });
 }
-
 importTweets(getTweets());

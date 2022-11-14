@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+# taken from https://github.com/visionmedia/git-extras
+
+hook() {
+  local hook=.git/hooks/$1.sh
+  if test -f $hook; then
+    echo "... $1"
+    . $hook
+  fi
+}
+
+echo $@
+
+if test $# -gt 0; then
+  hook pre-release
+  echo "... pushing $1"
+  git push $2 \
+    && git push $2 --tags \
+    && hook post-release \
+    && echo "... complete"
+else
+  echo "tag required" 1>&2 && exit 1
+fi
