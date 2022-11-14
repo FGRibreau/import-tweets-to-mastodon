@@ -15,7 +15,6 @@ const config = env.getOrElseAll({
   twitter: {
     excludeReplies: true,
     year: new Date().getFullYear(),
-
     tweetjs: {
       filepath: {
         $type: env.types.String
