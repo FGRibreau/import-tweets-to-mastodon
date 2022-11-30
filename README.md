@@ -57,13 +57,13 @@ export TWITTER_TWEETJS_FILEPATH=../tweets.js
 In the terminal (or CMD), enter in "import-tweets-mastodon" folder, located in Desktop. Write 
 ```
 npm install
+
 ```
 After this 
 ```
 node import.js
-```
 
-Tips: add the `DEBUG=*` environment variable for verbose output.
+```
 
 #### Need help?
 
