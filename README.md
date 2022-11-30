@@ -1,4 +1,4 @@
-# Importing tweets for a Mastodon instance (e. g.: https://framapiaf.org) :bird::arrow_right::elephant:
+# Importing tweets for a Mastodon instance :bird::arrow_right::elephant:
 Thats a simples script to import yours tweets from any Twitter account to a Mastodon account, in any instance.
 
 ## Steps
@@ -67,7 +67,5 @@ node import.js
 
 #### Need help?
 
-- Send an email to eduardopribeiro.6899@tutanota.com;
-- I'll not have all the answers, but I'll try to help you;
 - This project is open-sourced. Feel free to contribute;
 - If you really want support please consider [sponsoring me](https://github.com/sponsors/FGRibreau) :+1:
