@@ -93,14 +93,15 @@ function replaceTwitterUrls(full_text, urls) {
   });
   return full_text;
 }
-function createMastodonPost({
+
+async function createMastodonPost({
   apiToken,
   baseURL
 }, {
   status,
   language
 }) {
-  return axios({
+  return await axios({
     url: '/api/v1/statuses',
     baseURL: baseURL,
     method: 'POST',
