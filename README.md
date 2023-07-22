@@ -30,13 +30,13 @@ To request an API key from Mastodon, click [here](https://mastodon.cloud/setting
 3. Go to your Desktop folder;
 4. Write 
 ```
-MASTODON_API_BASEPATH=https://[YOUR-MASTODON-INSTANCE] 
+set MASTODON_API_BASEPATH=https://[YOUR-MASTODON-INSTANCE-DOMAIN] 
 ```
 ```
-MASTODON_API_KEY=YOUR_ACCESS_TOKEN_FROM_MASTODON
+set MASTODON_API_KEY=YOUR_ACCESS_TOKEN_FROM_MASTODON
 ```
 ```
-TWITTER_TWEETJS_FILEPATH=tweets.js
+set TWITTER_TWEETJS_FILEPATH=tweets.js
 ```
 #### Linux and MacOS
 1. Same thing as Windows;
@@ -44,7 +44,7 @@ TWITTER_TWEETJS_FILEPATH=tweets.js
 3. Got to your Desktop folder;
 4. Write
 ```
-export MASTODON_API_BASEPATH=https://[YOUR-MASTODON-INSTANCE] 
+export MASTODON_API_BASEPATH=https://[YOUR-MASTODON-INSTANCE-DOMAIN] 
 ```
 ```
 export MASTODON_API_KEY=YOUR_ACCESS_TOKEN_FROM_MASTODON
