@@ -86,6 +86,7 @@ function importTweets(tweets) {
       console.log(err);
     });
   }
+  next();
 }
 function replaceTwitterUrls(full_text, urls) {
   urls.forEach(url => {
